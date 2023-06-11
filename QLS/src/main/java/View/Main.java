@@ -13,14 +13,14 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         while (true) {
-            System.out.println("1. Them sach");
-            System.out.println("2. Cap nhat sach");
-            System.out.println("3. Xoa sach");
-            System.out.println("4. Tim kiem sach theo ten");
-            System.out.println("5. Tim kiem sach theo id");
-            System.out.println("6. Hien thi tat ca sach");
-            System.out.println("7. Thoat");
-            System.out.print("Nhap lua chon: ");
+            System.out.println("1. Add Book");
+            System.out.println("2. Update Book");
+            System.out.println("3. Delete Book");
+            System.out.println("4. Search by Name");
+            System.out.println("5. Search by Id");
+            System.out.println("6. Show Book");
+            System.out.println("7. Exit");
+            System.out.print("Enter Your Choice: ");
             int choice = scanner.nextInt();
             scanner.nextLine();
             switch (choice) {
@@ -45,7 +45,7 @@ public class Main {
                 case 7:
                     System.exit(0);
                 default:
-                    System.out.println(" chon lai");
+                    System.out.println("Try Again");
             }
         }
 
