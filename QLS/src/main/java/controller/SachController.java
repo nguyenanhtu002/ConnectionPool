@@ -13,13 +13,13 @@ public class SachController {
 
     public void addSach() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Nhap ten sach: ");
+        System.out.print("Enter Book Name : ");
         String name = scanner.nextLine();
-        System.out.print("Nhap tac gia: ");
+        System.out.print("Enter Author: ");
         String author = scanner.nextLine();
-        System.out.print("Nhap so luong: ");
+        System.out.print("Enter Quantity: ");
         int quantity = scanner.nextInt();
-        System.out.print("Nhap gia tien: ");
+        System.out.print("Enter Price: ");
         double price = scanner.nextDouble();
         Sach sach = new Sach(0, name, author, quantity, price);
         sachDAO.addSach(sach);
@@ -27,17 +27,17 @@ public class SachController {
 
     public void updateSach() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Nhap id sach can cap nhat: ");
+        System.out.print("Enter Id Update: ");
         int id = scanner.nextInt();
         Sach sach = sachDAO.getSachById(id);
         if (sach != null) {
-            System.out.print("Nhap ten sach: ");
+            System.out.print("Enter Name: ");
             String name = scanner.nextLine();
-            System.out.print("Nhap tac gia: ");
+            System.out.print("Enter Author: ");
             String author = scanner.nextLine();
-            System.out.print("Nhap so luong: ");
+            System.out.print("Enter Quantity: ");
             int quantity = scanner.nextInt();
-            System.out.print("Nhap gia tien: ");
+            System.out.print("Enter Price: ");
             double price = scanner.nextDouble();
             sach.setName(name);
             sach.setAuthor(author);
@@ -45,29 +45,29 @@ public class SachController {
             sach.setPrice(price);
             sachDAO.updateSach(sach);
         } else {
-            System.out.println("Khong ton tai sach co id = " + id);
+            System.out.println("Not Fould " + id);
         }
     }
 
     public void deleteSach() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Nhap id sach can xoa: ");
+        System.out.print("Enter ID Delete: ");
         int id = scanner.nextInt();
         Sach sach = sachDAO.getSachById(id);
         if (sach != null) {
             sachDAO.deleteSach(id);
         } else {
-            System.out.println("Khong ton tai sach co id = " + id);
+            System.out.println("Not Fould = " + id);
         }
     }
 
     public void searchSachByName() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Nhap ten sach can tim kiem: ");
+        System.out.print("Searching Book By : ");
         String name = scanner.nextLine();
         List<Sach> sachs = sachDAO.searchSachByName(name);
         if (sachs.isEmpty()) {
-            System.out.println("Khong tim thay sach nao");
+            System.out.println(FouldFould");
         } else {
             for (Sach sach : sachs) {
                 System.out.println("Id: " + sach.getId() + " - Name: " + sach.getName() + " - Author: " + sach.getAuthor() + " -  Quantity: " + sach.getQuantity() + " -  Price: " + sach.getPrice());
@@ -77,22 +77,22 @@ public class SachController {
 
     public void getSachById() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Nhap id sach can tim kiem: ");
+        System.out.print("Enter ID: ");
         int id = scanner.nextInt();
         Sach sach = sachDAO.getSachById(id);
         if (sach != null) {
             System.out.println("Id: " + sach.getId() + " - Name: " + sach.getName() + " - Author: " + sach.getAuthor() + " -  Quantity: " + sach.getQuantity() + " -  Price: " + sach.getPrice());
         } else {
-            System.out.println("Khong tim thay sach co id = " + id);
+            System.out.println("Not Fould " + id);
         }
     }
 
     public List<Sach> getAllSach() {
         List<Sach> sachList = sachDAO.getAllSach();
         if (sachList.isEmpty()) {
-            System.out.println("Khong co sach nao trong CSDL");
+            System.out.println("Not Fould In Database");
         } else {
-            System.out.println("Danh sach cac sach trong CSDL:");
+            System.out.println("List Book in Database:");
             for (Sach sach : sachList) {
                 System.out.println("Id: " + sach.getId() + " - Name: " + sach.getName() + " - Author: " + sach.getAuthor() + " -  Quantity: " + sach.getQuantity() + " -  Price: " + sach.getPrice());
             }
