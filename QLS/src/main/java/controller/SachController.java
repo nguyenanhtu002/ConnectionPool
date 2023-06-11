@@ -9,11 +9,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class SachController {
-    private SachDAO sachDAO;
-
-    public SachController() {
-        sachDAO = new SachDAOImpl();
-    }
+ private SachDAO sachDAO= new SachDAOImpl();
 
     public void addSach() {
         Scanner scanner = new Scanner(System.in);
