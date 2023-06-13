@@ -11,13 +11,7 @@ public class View {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         while (true) {
-            System.out.println("1. Add Book");
-            System.out.println("2. Update Book");
-            System.out.println("3. Delete Book");
-            System.out.println("4. Search by Name");
-            System.out.println("5. Search by Id");
-            System.out.println("6. Show Book");
-            System.out.println("7. Exit");
+            showMenu();
             System.out.print("Enter Your Choice: ");
             int choice = scanner.nextInt();
             scanner.nextLine();
@@ -47,5 +41,15 @@ public class View {
             }
         }
 
+    }
+    private static void showMenu() {
+        System.out.println("1. Add Book");
+        System.out.println("2. Update Book");
+        System.out.println("3. Delete Book");
+        System.out.println("4. Search by Name");
+        System.out.println("5. Search by Id");
+        System.out.println("6. Show Book");
+        System.out.println("7. Exit");
+        System.out.print("Enter Your Choice: ");
     }
 }
