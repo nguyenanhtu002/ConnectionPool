@@ -22,7 +22,8 @@ public class View {
                 case 2:
                     System.out.print("id of book you want update: ");
                     int idUpdate = scanner.nextInt();
-                    bookController.updateBook(idUpdate);
+                    Book bookUpdate = createBook();
+                    bookController.updateBook(bookUpdate,idUpdate);
                     break;
                 case 3:
                     System.out.print("id of book you want delete: ");
