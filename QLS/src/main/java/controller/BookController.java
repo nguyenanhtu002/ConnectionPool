@@ -18,8 +18,7 @@ public class BookController {
         bookDAO.addBook(book);
     }
 
-    public void updateBook(int id) {
-        Book book = createBook();
+    public void updateBook(Book book,int id) {
         bookDAO.updateBook(book, id);
     }
 
