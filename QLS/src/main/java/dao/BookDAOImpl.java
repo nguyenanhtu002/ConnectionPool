@@ -35,6 +35,14 @@ public class BookDAOImpl implements BookDAO {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                    System.out.println("Error closing");
+                }
+            }
         }
         return bookList;
     }
@@ -67,6 +75,14 @@ public class BookDAOImpl implements BookDAO {
                 }
             }
             e.printStackTrace();
+        } finally {
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                    System.out.println("Error closing");
+                }
+            }
         }
         return book;
     }
@@ -101,6 +117,14 @@ public class BookDAOImpl implements BookDAO {
                 }
             }
             e.printStackTrace();
+        } finally {
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                    System.out.println("Error closing");
+                }
+            }
         }
         return bookList;
     }
@@ -127,6 +151,14 @@ public class BookDAOImpl implements BookDAO {
                 }
             }
             e.printStackTrace();
+        } finally {
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                    System.out.println("Error closing");
+                }
+            }
         }
     }
 
@@ -152,6 +184,14 @@ public class BookDAOImpl implements BookDAO {
                 }
             }
             e.printStackTrace();
+        } finally {
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                    System.out.println("Error closing");
+                }
+            }
         }
     }
 
@@ -173,6 +213,14 @@ public class BookDAOImpl implements BookDAO {
                 }
             }
             e.printStackTrace();
+        } finally {
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                    System.out.println("Error closing");
+                }
+            }
         }
     }
 }
