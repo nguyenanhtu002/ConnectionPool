@@ -35,8 +35,8 @@ public class TransactionDAOImpl implements TransactionDAO {
                 int tagId = rs.getInt("tagId");
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
-                String description1 = rs.getString("description");
-                Transaction transaction = new Transaction(createAt, title, description, amount, tagId, new TagFinance(id, name, description1));
+                String descriptionTag = rs.getString("description");
+                Transaction transaction = new Transaction(createAt, title, description, amount, tagId, new TagFinance(id, name, descriptionTag));
                 list.add(transaction);
             }
 
