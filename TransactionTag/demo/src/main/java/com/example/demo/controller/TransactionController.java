@@ -24,9 +24,9 @@ public class TransactionController {
     }
 
     @PostMapping("create")
-    public TransactionRequestDTO create(@RequestBody TransactionRequestDTO transactionRequestDTO) throws Exception {
-        transactionService.create(transactionRequestDTO);
-        return transactionRequestDTO;
+    public TransactionRequestDTO create(@RequestBody TransactionRequestDTO transaction) throws Exception {
+        transactionService.create(transaction);
+        return transaction;
     }
 
     @DeleteMapping("delete/{id}")
@@ -35,7 +35,7 @@ public class TransactionController {
     }
 
     @PutMapping("update/{id}")
-    public void update(@RequestBody TransactionRequestDTO transactionRequestDTO, @PathVariable(name = "id") int id) throws Exception {
-        transactionService.updateTransaction(transactionRequestDTO, id);
+    public void update(@RequestBody TransactionRequestDTO transaction, @PathVariable(name = "id") int id) throws Exception {
+        transactionService.updateTransaction(transaction, id);
     }
 }
