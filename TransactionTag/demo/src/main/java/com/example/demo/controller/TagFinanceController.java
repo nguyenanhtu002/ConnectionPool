@@ -17,9 +17,8 @@ public class TagFinanceController {
     }
 
     @PostMapping("/create")
-    public TagfinanceRequestDTO create(@RequestBody TagfinanceRequestDTO tagFinance) throws Exception {
+    public void create(@RequestBody TagfinanceRequestDTO tagFinance) throws Exception {
         tagFinanceService.createTag(tagFinance);
-        return tagFinance;
     }
 
     @GetMapping("/get")
