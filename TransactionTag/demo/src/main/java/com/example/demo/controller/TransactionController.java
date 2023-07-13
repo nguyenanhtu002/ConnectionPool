@@ -24,9 +24,8 @@ public class TransactionController {
     }
 
     @PostMapping("create")
-    public TransactionRequestDTO create(@RequestBody TransactionRequestDTO transaction) throws Exception {
-        transactionService.create(transaction);
-        return transaction;
+    public void create(@RequestBody TransactionRequestDTO transactionRequestDTO) throws Exception {
+        transactionService.create(transactionRequestDTO);
     }
 
     @DeleteMapping("delete/{id}")
