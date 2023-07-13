@@ -11,5 +11,5 @@ public interface TagFinanceService {
     void updateTag(int Id, TagfinanceRequestDTO tagfinanceRequestDTO) throws Exception;
     void deleteTag(int Id) throws Exception;
     List<TagFinanceResponseDTO> getAllTagFinance() throws Exception;
-    TagFinance getTagFinanceById(int id) throws Exception;
+    TagFinanceResponseDTO getTagFinanceById(int id) throws Exception;
 }
