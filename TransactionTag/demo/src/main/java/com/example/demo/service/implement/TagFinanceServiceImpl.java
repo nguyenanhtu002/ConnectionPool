@@ -29,8 +29,9 @@ public class TagFinanceServiceImpl implements TagFinanceService {
     }
 
     @Override
-    public TagFinance getTagFinanceById(int id) throws Exception {
-        return tagFinanceDAO.getTagFinanceById(id);
+    public TagFinanceResponseDTO getTagFinanceById(int id) throws Exception {
+        TagFinance tagFinance = tagFinanceDAO.getTagFinanceById(id);
+        return new TagFinanceResponseDTO(tagFinance);
     }
 
     @Override
